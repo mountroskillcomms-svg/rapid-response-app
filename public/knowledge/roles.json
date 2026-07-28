@@ -1,0 +1,824 @@
+﻿{
+    "_meta":  {
+                  "description":  "Current government ministers (National/ACT/NZ First coalition, incl. April 2026 reshuffle) and the full Labour shadow cabinet / spokesperson list (as at the 11 March 2026 reshuffle). Green/TPM/other-party spokesperson assignments are NOT included - gap, not omission by accident.",
+                  "asOf":  "2026-07-18",
+                  "sources":  [
+                                  "https://en.wikipedia.org/wiki/Sixth_National_Government_of_New_Zealand (ministers table, incumbents only)",
+                                  "https://en.wikipedia.org/wiki/Shadow_Cabinet_of_Chris_Hipkins (spokesperson table as of 11 March 2026, itself sourced to labour.org.nz/ourteam)"
+                              ]
+              },
+    "currentMinisters":  [
+                             {
+                                 "portfolio":  "Prime Minister",
+                                 "name":  "Christopher Luxon",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Deputy Prime Minister",
+                                 "name":  "David Seymour",
+                                 "party":  "ACT",
+                                 "since":  "31 May 2025"
+                             },
+                             {
+                                 "portfolio":  "Leader of the House",
+                                 "name":  "Louise Upston",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Deputy Leader of the House",
+                                 "name":  "Scott Simpson",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for ACC",
+                                 "name":  "Scott Simpson",
+                                 "party":  "National",
+                                 "since":  "24 February 2025"
+                             },
+                             {
+                                 "portfolio":  "Minister of Agriculture",
+                                 "name":  "Todd McClay",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Attorney-General",
+                                 "name":  "Chris Bishop",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for Arts, Culture and Heritage",
+                                 "name":  "Paul Goldsmith",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Auckland",
+                                 "name":  "Simon Watts",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for Biosecurity",
+                                 "name":  "Andrew Hoggard",
+                                 "party":  "ACT",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Building and Construction",
+                                 "name":  "Chris Penk",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Child Poverty Reduction",
+                                 "name":  "Louise Upston",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Children",
+                                 "name":  "Karen Chhour",
+                                 "party":  "ACT",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Climate Change",
+                                 "name":  "Simon Watts",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Commerce and Consumer Affairs",
+                                 "name":  "Cameron Brewer",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for the Community and Voluntary Sector",
+                                 "name":  "Louise Upston",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Conservation",
+                                 "name":  "Tama Potaka",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Corrections",
+                                 "name":  "Mark Mitchell",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Courts",
+                                 "name":  "Nicole McKee",
+                                 "party":  "ACT",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Customs",
+                                 "name":  "Casey Costello",
+                                 "party":  "NZ First",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Defence",
+                                 "name":  "Chris Penk",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for Disability Issues",
+                                 "name":  "Louise Upston",
+                                 "party":  "National",
+                                 "since":  "24 April 2024"
+                             },
+                             {
+                                 "portfolio":  "Minister for Digitising Government",
+                                 "name":  "Paul Goldsmith",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for Economic Growth",
+                                 "name":  "Nicola Willis",
+                                 "party":  "National",
+                                 "since":  "24 January 2025"
+                             },
+                             {
+                                 "portfolio":  "Minister of Education",
+                                 "name":  "Erica Stanford",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Emergency Management and Recovery",
+                                 "name":  "Mark Mitchell",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Energy",
+                                 "name":  "Simeon Brown",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for the Environment",
+                                 "name":  "Nicola Grigg",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for Ethnic Communities",
+                                 "name":  "Mark Mitchell",
+                                 "party":  "National",
+                                 "since":  "24 January 2025"
+                             },
+                             {
+                                 "portfolio":  "Minister of Finance",
+                                 "name":  "Nicola Willis",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Food Safety",
+                                 "name":  "Andrew Hoggard",
+                                 "party":  "ACT",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Foreign Affairs",
+                                 "name":  "Winston Peters",
+                                 "party":  "NZ First",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Forestry",
+                                 "name":  "Todd McClay",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister Responsible for the GCSB",
+                                 "name":  "Chris Penk",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Lead Coordination Minister for the Government\u0027sResponse to the Royal Commission\u0027s Report intoHistorical Abuse in State Care and inthe Care of Faith-based Institutions",
+                                 "name":  "Erica Stanford",
+                                 "party":  "National",
+                                 "since":  "26 January 2024"
+                             },
+                             {
+                                 "portfolio":  "Minister of Health",
+                                 "name":  "Simeon Brown",
+                                 "party":  "National",
+                                 "since":  "24 January 2025"
+                             },
+                             {
+                                 "portfolio":  "Minister of Housing",
+                                 "name":  "Chris Bishop",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Hunting and Fishing",
+                                 "name":  "James Meager",
+                                 "party":  "National",
+                                 "since":  "24 January 2025"
+                             },
+                             {
+                                 "portfolio":  "Minister of Immigration",
+                                 "name":  "Erica Stanford",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Infrastructure",
+                                 "name":  "Chris Bishop",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Internal Affairs",
+                                 "name":  "Brooke van Velden",
+                                 "party":  "ACT",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Justice",
+                                 "name":  "Paul Goldsmith",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Land Information",
+                                 "name":  "Mike Butterick",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister of Local Government",
+                                 "name":  "Simon Watts",
+                                 "party":  "National",
+                                 "since":  "24 January 2025"
+                             },
+                             {
+                                 "portfolio":  "Minister for Māori-Crown Relations: Te Arawhiti",
+                                 "name":  "Tama Potaka",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Māori Development",
+                                 "name":  "Tama Potaka",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Media and Communications",
+                                 "name":  "Paul Goldsmith",
+                                 "party":  "National",
+                                 "since":  "24 April 2024"
+                             },
+                             {
+                                 "portfolio":  "Minister for Mental Health",
+                                 "name":  "Matt Doocey",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister Responsible for Ministerial Services",
+                                 "name":  "Christopher Luxon",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of National Security and Intelligence",
+                                 "name":  "Christopher Luxon",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister Responsible for the NZSIS",
+                                 "name":  "Chris Penk",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for Oceans and Fisheries",
+                                 "name":  "Shane Jones",
+                                 "party":  "NZ First",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Pacific Peoples",
+                                 "name":  "Paul Goldsmith",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister of Police",
+                                 "name":  "Mark Mitchell",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for the Prevention of Family and Sexual Violence",
+                                 "name":  "Karen Chhour",
+                                 "party":  "ACT",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for the Public Service",
+                                 "name":  "Paul Goldsmith",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for Racing",
+                                 "name":  "Winston Peters",
+                                 "party":  "NZ First",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Rail",
+                                 "name":  "Winston Peters",
+                                 "party":  "NZ First",
+                                 "since":  "11 December 2024"
+                             },
+                             {
+                                 "portfolio":  "Minister for Regional Development",
+                                 "name":  "Shane Jones",
+                                 "party":  "NZ First",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Regulation",
+                                 "name":  "David Seymour",
+                                 "party":  "ACT",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Resources",
+                                 "name":  "Shane Jones",
+                                 "party":  "NZ First",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Revenue",
+                                 "name":  "Simon Watts",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister Responsible for RMA Reform",
+                                 "name":  "Chris Bishop",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Rural Communities",
+                                 "name":  "Mark Patterson",
+                                 "party":  "NZ First",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Science, Innovation and Technology",
+                                 "name":  "Penny Simmonds",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for Seniors",
+                                 "name":  "Casey Costello",
+                                 "party":  "NZ First",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Small Business and Manufacturing",
+                                 "name":  "Cameron Brewer",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for Social Development and Employment",
+                                 "name":  "Louise Upston",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Social Investment",
+                                 "name":  "Nicola Willis",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for the South Island",
+                                 "name":  "James Meager",
+                                 "party":  "National",
+                                 "since":  "24 January 2025"
+                             },
+                             {
+                                 "portfolio":  "Minister for Space",
+                                 "name":  "Chris Penk",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for Sport and Recreation",
+                                 "name":  "Mark Mitchell",
+                                 "party":  "National",
+                                 "since":  "24 January 2025"
+                             },
+                             {
+                                 "portfolio":  "Minister of State Owned Enterprises",
+                                 "name":  "Simeon Brown",
+                                 "party":  "National",
+                                 "since":  "24 January 2025"
+                             },
+                             {
+                                 "portfolio":  "Minister of Statistics",
+                                 "name":  "Scott Simpson",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister for Treaty of Waitangi Negotiations",
+                                 "name":  "Paul Goldsmith",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Tertiary Education and Skills",
+                                 "name":  "Penny Simmonds",
+                                 "party":  "National",
+                                 "since":  "7 April 2026"
+                             },
+                             {
+                                 "portfolio":  "Minister of Tourism and Hospitality",
+                                 "name":  "Louise Upston",
+                                 "party":  "National",
+                                 "since":  "24 January 2025"
+                             },
+                             {
+                                 "portfolio":  "Minister of Trade and Investment",
+                                 "name":  "Todd McClay",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister of Transport",
+                                 "name":  "Chris Bishop",
+                                 "party":  "National",
+                                 "since":  "24 January 2025"
+                             },
+                             {
+                                 "portfolio":  "Minister for Veterans",
+                                 "name":  "Chris Penk",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Whānau Ora",
+                                 "name":  "Tama Potaka",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Women",
+                                 "name":  "Nicola Grigg",
+                                 "party":  "National",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Workplace Relations and Safety",
+                                 "name":  "Brooke van Velden",
+                                 "party":  "ACT",
+                                 "since":  "27 November 2023"
+                             },
+                             {
+                                 "portfolio":  "Minister for Youth",
+                                 "name":  "James Meager",
+                                 "party":  "National",
+                                 "since":  "24 January 2025"
+                             }
+                         ],
+    "labourSpokespersons":  [
+                                {
+                                    "rank":  1,
+                                    "name":  "Chris Hipkins",
+                                    "roles":  [
+                                                  "Leader of the Opposition",
+                                                  "Spokesperson for Ministerial Services",
+                                                  "Spokesperson for National Security and Intelligence"
+                                              ]
+                                },
+                                {
+                                    "rank":  2,
+                                    "name":  "Carmel Sepuloni",
+                                    "roles":  [
+                                                  "Deputy Leader of the Opposition",
+                                                  "Spokesperson for Auckland Issues",
+                                                  "Spokesperson for Pacific Peoples",
+                                                  "Spokesperson for Women"
+                                              ]
+                                },
+                                {
+                                    "rank":  3,
+                                    "name":  "Barbara Edmonds",
+                                    "roles":  [
+                                                  "Spokesperson for Finance",
+                                                  "Spokesperson for the Economy, Savings and Investment"
+                                              ]
+                                },
+                                {
+                                    "rank":  4,
+                                    "name":  "Megan Woods",
+                                    "roles":  [
+                                                  "Spokesperson for Manufacturing and Industry",
+                                                  "Spokesperson for Energy and Resources",
+                                                  "Associate Spokesperson for Finance"
+                                              ]
+                                },
+                                {
+                                    "rank":  5,
+                                    "name":  "Willie Jackson",
+                                    "roles":  [
+                                                  "Spokesperson for Māori Development",
+                                                  "Spokesperson for Māori Crown Relations",
+                                                  "Associate Spokesperson for Health (Māori)"
+                                              ]
+                                },
+                                {
+                                    "rank":  6,
+                                    "name":  "Ayesha Verrall",
+                                    "roles":  [
+                                                  "Spokesperson for Health",
+                                                  "Spokesperson for Wellington Issues"
+                                              ]
+                                },
+                                {
+                                    "rank":  7,
+                                    "name":  "Kieran McAnulty",
+                                    "roles":  [
+                                                  "Shadow Leader of the House",
+                                                  "Spokesperson for Housing",
+                                                  "Spokesperson for Infrastructure",
+                                                  "Spokesperson for Public Investment"
+                                              ]
+                                },
+                                {
+                                    "rank":  8,
+                                    "name":  "Willow-Jean Prime",
+                                    "roles":  [
+                                                  "Spokesperson for Social Development",
+                                                  "Spokesperson for Children",
+                                                  "Associate Spokesperson for Education (Māori)"
+                                              ]
+                                },
+                                {
+                                    "rank":  9,
+                                    "name":  "Ginny Andersen",
+                                    "roles":  [
+                                                  "Spokesperson for Education",
+                                                  "Spokesperson for Police",
+                                                  "Spokesperson for Jobs and Income",
+                                                  "Spokesperson for Treaty of Waitangi Negotiations"
+                                              ]
+                                },
+                                {
+                                    "rank":  10,
+                                    "name":  "Jan Tinetti",
+                                    "roles":  [
+                                                  "Spokesperson for Workplace Relations and Safety",
+                                                  "Spokesperson for Social Investment",
+                                                  "Spokesperson for Early Childhood Education",
+                                                  "Spokesperson for Child Poverty Reduction"
+                                              ]
+                                },
+                                {
+                                    "rank":  11,
+                                    "name":  "Tangi Utikere",
+                                    "roles":  [
+                                                  "Deputy Shadow Leader of the House",
+                                                  "Spokesperson for Transport",
+                                                  "Spokesperson for Local Government",
+                                                  "Spokesperson for Racing",
+                                                  "Spokesperson for State-Owned Enterprises"
+                                              ]
+                                },
+                                {
+                                    "rank":  12,
+                                    "name":  "Vanushi Walters",
+                                    "roles":  [
+                                                  "Shadow Attorney-General",
+                                                  "Spokesperson for Foreign Affairs",
+                                                  "Spokesperson for the NZSIS",
+                                                  "Spokesperson for the GCSB"
+                                              ]
+                                },
+                                {
+                                    "rank":  13,
+                                    "name":  "Reuben Davidson",
+                                    "roles":  [
+                                                  "Spokesperson for Economic Development",
+                                                  "Spokesperson for Science, Technology and Innovation",
+                                                  "Spokesperson for Broadcasting, Media and Creative Economy"
+                                              ]
+                                },
+                                {
+                                    "rank":  14,
+                                    "name":  "Priyanca Radhakrishnan",
+                                    "roles":  [
+                                                  "Spokesperson for Conservation",
+                                                  "Spokesperson for Disability Issues",
+                                                  "Spokesperson for ACC"
+                                              ]
+                                },
+                                {
+                                    "rank":  15,
+                                    "name":  "Jo Luxton",
+                                    "roles":  [
+                                                  "Spokesperson for Agriculture",
+                                                  "Spokesperson for Biosecurity",
+                                                  "Spokesperson for Customs"
+                                              ]
+                                },
+                                {
+                                    "rank":  16,
+                                    "name":  "Deborah Russell",
+                                    "roles":  [
+                                                  "Spokesperson for Revenue",
+                                                  "Spokesperson for Climate Change",
+                                                  "Associate Spokesperson for Finance"
+                                              ]
+                                },
+                                {
+                                    "rank":  17,
+                                    "name":  "Rachel Brooking",
+                                    "roles":  [
+                                                  "Spokesperson for the Environment",
+                                                  "Spokesperson for Food Safety",
+                                                  "Spokesperson for Space",
+                                                  "Spokesperson for RMA Reform"
+                                              ]
+                                },
+                                {
+                                    "rank":  18,
+                                    "name":  "Damien O\u0027Connor",
+                                    "roles":  [
+                                                  "Spokesperson for Trade and Export Growth",
+                                                  "Spokesperson for Defence",
+                                                  "Spokesperson for Land Information",
+                                                  "Spokesperson for Regional Development"
+                                              ]
+                                },
+                                {
+                                    "rank":  19,
+                                    "name":  "Camilla Belich",
+                                    "roles":  [
+                                                  "Spokesperson for Justice",
+                                                  "Spokesperson for Public Service"
+                                              ]
+                                },
+                                {
+                                    "rank":  20,
+                                    "name":  "Cushla Tangaere-Manuel",
+                                    "roles":  [
+                                                  "Assistant Whip",
+                                                  "Spokesperson for Emergency Management and Recovery",
+                                                  "Spokesperson for the Natural Hazards Commission",
+                                                  "Spokesperson for Sport and Recreation",
+                                                  "Spokesperson for Forestry",
+                                                  "Spokesperson for Māori Economy"
+                                              ]
+                                },
+                                {
+                                    "rank":  21,
+                                    "name":  "Glen Bennett",
+                                    "roles":  [
+                                                  "Chief Whip",
+                                                  "Spokesperson for Tourism and Hospitality"
+                                              ]
+                                },
+                                {
+                                    "rank":  22,
+                                    "name":  "Tracey McLellan",
+                                    "roles":  [
+                                                  "Junior Whip",
+                                                  "Spokesperson for Corrections",
+                                                  "Spokesperson for Christchurch Issues"
+                                              ]
+                                },
+                                {
+                                    "rank":  23,
+                                    "name":  "Jenny Salesa",
+                                    "roles":  [
+                                                  "Spokesperson for Ethnic Communities",
+                                                  "Spokesperson for Customs",
+                                                  "Associate Spokesperson for Pacific Peoples"
+                                              ]
+                                },
+                                {
+                                    "rank":  24,
+                                    "name":  "Arena Williams",
+                                    "roles":  [
+                                                  "Spokesperson for Commerce and Consumer Affairs",
+                                                  "Spokesperson for Building and Construction",
+                                                  "Spokesperson for Youth"
+                                              ]
+                                },
+                                {
+                                    "rank":  25,
+                                    "name":  "Phil Twyford",
+                                    "roles":  [
+                                                  "Spokesperson for Immigration",
+                                                  "Spokesperson for Disarmament and Arms Control",
+                                                  "Associate Spokesperson for Foreign Affairs"
+                                              ]
+                                },
+                                {
+                                    "rank":  26,
+                                    "name":  "Greg O\u0027Connor",
+                                    "roles":  [
+                                                  "Assistant Speaker of the House of Representatives",
+                                                  "Spokesperson for Courts",
+                                                  "Spokesperson for Veterans"
+                                              ]
+                                },
+                                {
+                                    "rank":  27,
+                                    "name":  "Rachel Boyack",
+                                    "roles":  [
+                                                  "Spokesperson for Oceans and Fisheries",
+                                                  "Spokesperson for Arts, Culture and Heritage",
+                                                  "Spokesperson for Animal Welfare"
+                                              ]
+                                },
+                                {
+                                    "rank":  28,
+                                    "name":  "Shanan Halbert",
+                                    "roles":  [
+                                                  "Spokesperson for Tertiary Education",
+                                                  "Spokesperson for Whānau Ora"
+                                              ]
+                                },
+                                {
+                                    "rank":  29,
+                                    "name":  "Helen White",
+                                    "roles":  [
+                                                  "Spokesperson for the Community and Voluntary Sector",
+                                                  "Spokesperson for Prevention of Family and Sexual Violence"
+                                              ]
+                                },
+                                {
+                                    "rank":  30,
+                                    "name":  "Ingrid Leary",
+                                    "roles":  [
+                                                  "Spokesperson for Seniors",
+                                                  "Spokesperson for Mental Health"
+                                              ]
+                                },
+                                {
+                                    "rank":  31,
+                                    "name":  "Lemauga Lydia Sosene",
+                                    "roles":  [
+                                                  "Spokesperson for Internal Affairs",
+                                                  "Spokesperson for Statistics"
+                                              ]
+                                },
+                                {
+                                    "rank":  32,
+                                    "name":  "Georgie Dansey",
+                                    "roles":  [
+                                                  "Spokesperson for Rainbow Issues",
+                                                  "Spokesperson for Regulation"
+                                              ]
+                                },
+                                {
+                                    "rank":  33,
+                                    "name":  "Dan Rosewarne",
+                                    "roles":  [
+                                                  "Spokesperson for Rural Communities",
+                                                  "Spokesperson for Small Business"
+                                              ]
+                                },
+                                {
+                                    "rank":  34,
+                                    "name":  "Duncan Webb",
+                                    "roles":  [
+
+                                              ]
+                                }
+                            ]
+}

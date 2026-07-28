@@ -1,0 +1,7 @@
+{
+  "_meta": {
+    "description": "Media interviewer style profiles. Add a new interviewer by dropping a .md file here (frontmatter: key, label, show; body = style guide) and listing it below — it appears in the UI picker automatically.",
+    "lastUpdated": "2026-07-18"
+  },
+  "files": ["jack-tame.md", "mike-hosking.md"]
+}

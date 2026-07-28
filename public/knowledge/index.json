@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "description": "Manifest for the Rapid Response knowledge folder. The app should read this first, then load only the files relevant to the task at hand (selective retrieval keeps token costs down). Static files belong at the FRONT of prompts for cache hits.",
+    "lastUpdated": "2026-07-18"
+  },
+  "files": [
+    {
+      "path": "electorates.json",
+      "type": "structured",
+      "use": "Lookup: all 71 electorates for the 2026 election with declared candidates, party, incumbency, list rank, portfolio/spokesperson roles, withdrawal status. Load only the relevant electorate record(s), not the whole file.",
+      "caveats": "Candidate selections ongoing as of 2026-07-18; missing candidate usually means not yet selected."
+    },
+    {
+      "path": "party-lists.json",
+      "type": "structured",
+      "use": "Final published party lists (rank order). Labour (72) and Greens (34) only.",
+      "caveats": "National, ACT, NZ First, Te Pati Maori had NOT released lists as of 2026-07-18. Never invent ranks for them."
+    },
+    {
+      "path": "roles.json",
+      "type": "structured",
+      "use": "Who holds what: current government ministers (post April 2026 reshuffle) and full Labour spokesperson list (as at 11 March 2026 reshuffle). Use to attribute quotes to the correct portfolio holder.",
+      "caveats": "Green/TPM/minor-party spokesperson roles not included."
+    },
+    {
+      "path": "mmp-electoral-system.md",
+      "type": "reference",
+      "use": "How MMP and NZ electoral law work, incl. 2026 specifics (71 electorates + 49 list seats, 7 Nov date). Stable; load when the task involves electoral mechanics, thresholds, coalitions, or campaign-period rules."
+    },
+    {
+      "path": "elections-narratives.md",
+      "type": "reference",
+      "use": "Interpretive analysis of the 2017/2020/2023 elections: narratives, transferable learnings, and no-longer-applies flags. Load for strategy/war-room reasoning. Analysis to reason FROM, never to quote as fact.",
+      "caveats": "Editorial judgement, human-reviewed. The no-longer-applies flags are as important as the learnings."
+    },
+    {
+      "path": "tone/labour-press-release-tone.md",
+      "type": "tone",
+      "use": "ALWAYS load for press statement generation: release types, structural template, voice rules, recurring frames, rigour checklist, anti-patterns. Derived from 20 real May-Jul 2026 Labour releases."
+    },
+    {
+      "path": "policies/",
+      "type": "feed",
+      "use": "One file per policy, human-approved via the sweep's Approve button. Grounds the Labour-position stage.",
+      "caveats": "Do not treat absence of a policy file as absence of a policy."
+    },
+    {
+      "path": "polling.md",
+      "type": "reference",
+      "use": "Manually curated polling reference (party vote, issue salience, capability leads). Update monthly. Inactive until the STATUS template marker is removed. Once active, injected as the polling basis for persuasiveness/salience ratings.",
+      "caveats": "Human-maintained; the file's own dates are the freshness signal."
+    },
+    {
+      "path": "lines/",
+      "type": "feed",
+      "use": "Message-discipline memory: established lines per issue, saved from finished briefs (one click). Injected into later angle generation on the same ground so frames get REINFORCED, not reinvented.",
+      "caveats": "Human-approved via the Save-lines button; prune lines that events have made unsupportable."
+    },
+    {
+      "path": "profiles/swing-voter-2026.md",
+      "type": "prose",
+      "use": "Constructed critical-swing-voter persona for the 2026 coalition (2023 defectors, demoralised 2020 Labour voters, Maori-roll variant). Injected into triage, angles, and war-room terrain to score persuasion against.",
+      "caveats": "Constructed persuasion target, not survey output - real polling/focus-group evidence overrides it."
+    },
+    {
+      "path": "profiles/interviewers/",
+      "type": "prose",
+      "use": "Media interviewer style profiles (one .md each, frontmatter key/label/show + style-guide body, listed in its index.json). Loaded into the interview-prep feature; KB profiles override/extend the hardcoded fallback set. Add a file + index entry to add an interviewer to the UI picker."
+    }
+  ],
+  "updatePolicy": "Static files (mmp, electorates pre-writ) refresh manually or when the daily sweep detects a selection/withdrawal. Volatile data (policies) is auto-DRAFTED but human-APPROVED before entering this folder."
+}

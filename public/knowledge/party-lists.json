@@ -1,0 +1,652 @@
+﻿{
+    "_meta":  {
+                  "description":  "Final published party lists for the 2026 NZ general election. IMPORTANT: as of the asOf date only Labour (released 8 June 2026) and the Greens (final list 22 April 2026, renumbered after Awhi Haenga\u0027s 27 May withdrawal) have published lists. National, ACT, NZ First, Te Pati Maori and others had NOT yet released lists - do not invent ranks for them.",
+                  "asOf":  "2026-07-18",
+                  "sources":  [
+                                  "https://en.wikipedia.org/wiki/Party_lists_in_the_2026_New_Zealand_general_election",
+                                  "RNZ: Who\u0027s in, who\u0027s out? Labour unveils list for November election (8 June 2026) - used as independent cross-check"
+                              ]
+              },
+    "lists":  {
+                  "Labour Party":  [
+                                       {
+                                           "rank":  1,
+                                           "name":  "Chris Hipkins",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Remutaka"
+                                       },
+                                       {
+                                           "rank":  2,
+                                           "name":  "Carmel Sepuloni",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Glendene"
+                                       },
+                                       {
+                                           "rank":  3,
+                                           "name":  "Barbara Edmonds",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Kenepuru"
+                                       },
+                                       {
+                                           "rank":  4,
+                                           "name":  "Willie Jackson",
+                                           "incumbency":  "list",
+                                           "contesting":  ""
+                                       },
+                                       {
+                                           "rank":  5,
+                                           "name":  "Megan Woods",
+                                           "incumbency":  "electorate",
+                                           "contesting":  ""
+                                       },
+                                       {
+                                           "rank":  6,
+                                           "name":  "Ayesha Verrall",
+                                           "incumbency":  "list",
+                                           "contesting":  "Wellington North"
+                                       },
+                                       {
+                                           "rank":  7,
+                                           "name":  "Willow-Jean Prime",
+                                           "incumbency":  "list",
+                                           "contesting":  "Te Tai Tokerau"
+                                       },
+                                       {
+                                           "rank":  8,
+                                           "name":  "Vanushi Walters",
+                                           "incumbency":  "list",
+                                           "contesting":  "Waitakere"
+                                       },
+                                       {
+                                           "rank":  9,
+                                           "name":  "Cushla Tangaere-Manuel",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Ikaroa-Rawhiti"
+                                       },
+                                       {
+                                           "rank":  10,
+                                           "name":  "Kieran McAnulty",
+                                           "incumbency":  "list",
+                                           "contesting":  "Wairarapa"
+                                       },
+                                       {
+                                           "rank":  11,
+                                           "name":  "Rachel Brooking",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Dunedin"
+                                       },
+                                       {
+                                           "rank":  12,
+                                           "name":  "Ginny Andersen",
+                                           "incumbency":  "list",
+                                           "contesting":  "Hutt South"
+                                       },
+                                       {
+                                           "rank":  13,
+                                           "name":  "Rakesh Naidoo",
+                                           "incumbency":  "",
+                                           "contesting":  ""
+                                       },
+                                       {
+                                           "rank":  14,
+                                           "name":  "Tangi Utikere",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Palmerston North"
+                                       },
+                                       {
+                                           "rank":  15,
+                                           "name":  "Jan Tinetti",
+                                           "incumbency":  "list",
+                                           "contesting":  "Tauranga"
+                                       },
+                                       {
+                                           "rank":  16,
+                                           "name":  "Damien O\u0027Connor",
+                                           "incumbency":  "list",
+                                           "contesting":  "Waitaki"
+                                       },
+                                       {
+                                           "rank":  17,
+                                           "name":  "Jo Luxton",
+                                           "incumbency":  "list",
+                                           "contesting":  "East Cape"
+                                       },
+                                       {
+                                           "rank":  18,
+                                           "name":  "Priyanca Radhakrishnan",
+                                           "incumbency":  "list",
+                                           "contesting":  "Maungakiekie"
+                                       },
+                                       {
+                                           "rank":  19,
+                                           "name":  "Shanan Halbert",
+                                           "incumbency":  "list",
+                                           "contesting":  "Northcote"
+                                       },
+                                       {
+                                           "rank":  20,
+                                           "name":  "Chris Flatt",
+                                           "incumbency":  "",
+                                           "contesting":  "Taupō"
+                                       },
+                                       {
+                                           "rank":  21,
+                                           "name":  "Reuben Davidson",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Christchurch East"
+                                       },
+                                       {
+                                           "rank":  22,
+                                           "name":  "Kingi Kiriona",
+                                           "incumbency":  "",
+                                           "contesting":  "Hauraki-Waikato"
+                                       },
+                                       {
+                                           "rank":  23,
+                                           "name":  "Camilla Belich",
+                                           "incumbency":  "list",
+                                           "contesting":  "Epsom"
+                                       },
+                                       {
+                                           "rank":  24,
+                                           "name":  "Jenny Salesa",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Ōtāhuhu"
+                                       },
+                                       {
+                                           "rank":  25,
+                                           "name":  "Glen Bennett",
+                                           "incumbency":  "list",
+                                           "contesting":  "Coromandel"
+                                       },
+                                       {
+                                           "rank":  26,
+                                           "name":  "Sophie Handford",
+                                           "incumbency":  "",
+                                           "contesting":  "Kapiti"
+                                       },
+                                       {
+                                           "rank":  27,
+                                           "name":  "Deborah Russell",
+                                           "incumbency":  "list",
+                                           "contesting":  ""
+                                       },
+                                       {
+                                           "rank":  28,
+                                           "name":  "Tracey McLellan",
+                                           "incumbency":  "list",
+                                           "contesting":  "Banks Peninsula"
+                                       },
+                                       {
+                                           "rank":  29,
+                                           "name":  "Max Harris",
+                                           "incumbency":  "",
+                                           "contesting":  "Tāmaki"
+                                       },
+                                       {
+                                           "rank":  30,
+                                           "name":  "Warrick Cleine",
+                                           "incumbency":  "",
+                                           "contesting":  ""
+                                       },
+                                       {
+                                           "rank":  31,
+                                           "name":  "Ibrahim Omer",
+                                           "incumbency":  "former",
+                                           "contesting":  ""
+                                       },
+                                       {
+                                           "rank":  32,
+                                           "name":  "Neru Leavasa",
+                                           "incumbency":  "former",
+                                           "contesting":  "Botany"
+                                       },
+                                       {
+                                           "rank":  33,
+                                           "name":  "Georgie Dansey",
+                                           "incumbency":  "list",
+                                           "contesting":  "Hamilton East"
+                                       },
+                                       {
+                                           "rank":  34,
+                                           "name":  "Te Pūoho Kātene",
+                                           "incumbency":  "",
+                                           "contesting":  "Te Tai Hauāuru"
+                                       },
+                                       {
+                                           "rank":  35,
+                                           "name":  "Naisi Chen",
+                                           "incumbency":  "former",
+                                           "contesting":  "Auckland Central"
+                                       },
+                                       {
+                                           "rank":  36,
+                                           "name":  "Dan Rosewarne",
+                                           "incumbency":  "list",
+                                           "contesting":  "Waimakariri"
+                                       },
+                                       {
+                                           "rank":  37,
+                                           "name":  "Rachel Boyack",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Nelson"
+                                       },
+                                       {
+                                           "rank":  38,
+                                           "name":  "Helen White",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Mount Albert"
+                                       },
+                                       {
+                                           "rank":  39,
+                                           "name":  "Ingrid Leary",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Taieri"
+                                       },
+                                       {
+                                           "rank":  40,
+                                           "name":  "Phil Twyford",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Henderson"
+                                       },
+                                       {
+                                           "rank":  41,
+                                           "name":  "Arena Williams",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Manurewa"
+                                       },
+                                       {
+                                           "rank":  42,
+                                           "name":  "Lemauga Lydia Sosene",
+                                           "incumbency":  "electorate",
+                                           "contesting":  "Māngere"
+                                       },
+                                       {
+                                           "rank":  43,
+                                           "name":  "Kerrin Leoni",
+                                           "incumbency":  "",
+                                           "contesting":  "Tāmaki Makaurau"
+                                       },
+                                       {
+                                           "rank":  44,
+                                           "name":  "Toni Boynton",
+                                           "incumbency":  "",
+                                           "contesting":  "Waiariki"
+                                       },
+                                       {
+                                           "rank":  45,
+                                           "name":  "Hannah Pia Baral",
+                                           "incumbency":  "",
+                                           "contesting":  "Upper Harbour"
+                                       },
+                                       {
+                                           "rank":  46,
+                                           "name":  "Angela Roberts",
+                                           "incumbency":  "former",
+                                           "contesting":  "Whanganui"
+                                       },
+                                       {
+                                           "rank":  47,
+                                           "name":  "Estefania Muller-Pallarès",
+                                           "incumbency":  "",
+                                           "contesting":  "Whangaparāoa"
+                                       },
+                                       {
+                                           "rank":  48,
+                                           "name":  "Anahila Kanongata\u0027a",
+                                           "incumbency":  "former",
+                                           "contesting":  "Papakura"
+                                       },
+                                       {
+                                           "rank":  49,
+                                           "name":  "Gary Payinda",
+                                           "incumbency":  "",
+                                           "contesting":  "Whangārei"
+                                       },
+                                       {
+                                           "rank":  50,
+                                           "name":  "Alex Hedley",
+                                           "incumbency":  "",
+                                           "contesting":  "Napier"
+                                       },
+                                       {
+                                           "rank":  51,
+                                           "name":  "Craig Renney",
+                                           "incumbency":  "",
+                                           "contesting":  "Wellington Bays"
+                                       },
+                                       {
+                                           "rank":  52,
+                                           "name":  "George Hampton",
+                                           "incumbency":  "",
+                                           "contesting":  "Christchurch Central"
+                                       },
+                                       {
+                                           "rank":  53,
+                                           "name":  "Dominik Yanzick",
+                                           "incumbency":  "",
+                                           "contesting":  "Wigram"
+                                       },
+                                       {
+                                           "rank":  54,
+                                           "name":  "Rory Paterson",
+                                           "incumbency":  "",
+                                           "contesting":  "West Coast-Tasman"
+                                       },
+                                       {
+                                           "rank":  55,
+                                           "name":  "Ashleigh Latimer",
+                                           "incumbency":  "",
+                                           "contesting":  "Northland"
+                                       },
+                                       {
+                                           "rank":  56,
+                                           "name":  "Rata Jamieson",
+                                           "incumbency":  "",
+                                           "contesting":  "Ilam"
+                                       },
+                                       {
+                                           "rank":  57,
+                                           "name":  "Naresh Perinpanayagam",
+                                           "incumbency":  "",
+                                           "contesting":  ""
+                                       },
+                                       {
+                                           "rank":  58,
+                                           "name":  "Peter McDonald",
+                                           "incumbency":  "",
+                                           "contesting":  "Southland"
+                                       },
+                                       {
+                                           "rank":  59,
+                                           "name":  "Amanda Clinton-Gohdes",
+                                           "incumbency":  "",
+                                           "contesting":  "New Plymouth"
+                                       },
+                                       {
+                                           "rank":  60,
+                                           "name":  "Myra Williamson",
+                                           "incumbency":  "",
+                                           "contesting":  "Hamilton West"
+                                       },
+                                       {
+                                           "rank":  61,
+                                           "name":  "Kharag Singh",
+                                           "incumbency":  "",
+                                           "contesting":  "Takanini"
+                                       },
+                                       {
+                                           "rank":  62,
+                                           "name":  "Janice Lee",
+                                           "incumbency":  "",
+                                           "contesting":  "Invercargill"
+                                       },
+                                       {
+                                           "rank":  63,
+                                           "name":  "Sam Collins",
+                                           "incumbency":  "",
+                                           "contesting":  "North Shore"
+                                       },
+                                       {
+                                           "rank":  64,
+                                           "name":  "Sange Malama",
+                                           "incumbency":  "",
+                                           "contesting":  "Rangitata"
+                                       },
+                                       {
+                                           "rank":  65,
+                                           "name":  "Rhieve Grey",
+                                           "incumbency":  "",
+                                           "contesting":  "Mount Maunganui"
+                                       },
+                                       {
+                                           "rank":  66,
+                                           "name":  "Karl Severinsen",
+                                           "incumbency":  "",
+                                           "contesting":  "Rangitīkei"
+                                       },
+                                       {
+                                           "rank":  67,
+                                           "name":  "Henrietta Hunkin-Tagaloa",
+                                           "incumbency":  "",
+                                           "contesting":  ""
+                                       },
+                                       {
+                                           "rank":  68,
+                                           "name":  "Fisher Wang",
+                                           "incumbency":  "",
+                                           "contesting":  "Rotorua"
+                                       },
+                                       {
+                                           "rank":  69,
+                                           "name":  "Brendan McEnroe",
+                                           "incumbency":  "",
+                                           "contesting":  "East Coast Bays"
+                                       },
+                                       {
+                                           "rank":  70,
+                                           "name":  "Campbell Matthews",
+                                           "incumbency":  "",
+                                           "contesting":  "Pakuranga"
+                                       },
+                                       {
+                                           "rank":  71,
+                                           "name":  "David Pattemore",
+                                           "incumbency":  "",
+                                           "contesting":  "Taranaki-King Country"
+                                       },
+                                       {
+                                           "rank":  72,
+                                           "name":  "Nathaniel Howe",
+                                           "incumbency":  "",
+                                           "contesting":  ""
+                                       }
+                                   ],
+                  "Green Party":  [
+                                      {
+                                          "rank":  1,
+                                          "name":  "Marama Davidson",
+                                          "incumbency":  "list",
+                                          "contesting":  ""
+                                      },
+                                      {
+                                          "rank":  2,
+                                          "name":  "Chlöe Swarbrick",
+                                          "incumbency":  "electorate",
+                                          "contesting":  "Auckland Central"
+                                      },
+                                      {
+                                          "rank":  3,
+                                          "name":  "Teanau Tuiono",
+                                          "incumbency":  "list",
+                                          "contesting":  "Palmerston North"
+                                      },
+                                      {
+                                          "rank":  4,
+                                          "name":  "Tamatha Paul",
+                                          "incumbency":  "electorate",
+                                          "contesting":  "Wellington North"
+                                      },
+                                      {
+                                          "rank":  5,
+                                          "name":  "Julie Anne Genter",
+                                          "incumbency":  "electorate",
+                                          "contesting":  "Wellington Bays"
+                                      },
+                                      {
+                                          "rank":  6,
+                                          "name":  "Lan Pham",
+                                          "incumbency":  "list",
+                                          "contesting":  "Kenepuru"
+                                      },
+                                      {
+                                          "rank":  7,
+                                          "name":  "Hūhana Lyndon",
+                                          "incumbency":  "list",
+                                          "contesting":  "Te Tai Tokerau"
+                                      },
+                                      {
+                                          "rank":  8,
+                                          "name":  "Lawrence Xu-Nan",
+                                          "incumbency":  "list",
+                                          "contesting":  "Epsom"
+                                      },
+                                      {
+                                          "rank":  9,
+                                          "name":  "Ricardo Menéndez March",
+                                          "incumbency":  "list",
+                                          "contesting":  "Mount Albert"
+                                      },
+                                      {
+                                          "rank":  10,
+                                          "name":  "Francisco Hernandez",
+                                          "incumbency":  "list",
+                                          "contesting":  "Dunedin"
+                                      },
+                                      {
+                                          "rank":  11,
+                                          "name":  "Kahurangi Carter",
+                                          "incumbency":  "list",
+                                          "contesting":  "Christchurch Central"
+                                      },
+                                      {
+                                          "rank":  12,
+                                          "name":  "Steve Abel",
+                                          "incumbency":  "list",
+                                          "contesting":  "Waitakere"
+                                      },
+                                      {
+                                          "rank":  13,
+                                          "name":  "Tania Waikato",
+                                          "incumbency":  "",
+                                          "contesting":  "Waiariki"
+                                      },
+                                      {
+                                          "rank":  14,
+                                          "name":  "Craig Pauling",
+                                          "incumbency":  "",
+                                          "contesting":  "Banks Peninsula"
+                                      },
+                                      {
+                                          "rank":  15,
+                                          "name":  "Scott Willis",
+                                          "incumbency":  "list",
+                                          "contesting":  "Taieri"
+                                      },
+                                      {
+                                          "rank":  16,
+                                          "name":  "Rohan O\u0027Neill-Stevens",
+                                          "incumbency":  "",
+                                          "contesting":  "Nelson"
+                                      },
+                                      {
+                                          "rank":  17,
+                                          "name":  "Bhen Goodsir",
+                                          "incumbency":  "",
+                                          "contesting":  "Northcote"
+                                      },
+                                      {
+                                          "rank":  18,
+                                          "name":  "Yasmine Serhan",
+                                          "incumbency":  "",
+                                          "contesting":  "Glendene"
+                                      },
+                                      {
+                                          "rank":  19,
+                                          "name":  "Louise Hutt",
+                                          "incumbency":  "",
+                                          "contesting":  "Hamilton West"
+                                      },
+                                      {
+                                          "rank":  20,
+                                          "name":  "Mike Davidson",
+                                          "incumbency":  "list",
+                                          "contesting":  "Ilam"
+                                      },
+                                      {
+                                          "rank":  21,
+                                          "name":  "Heather Te Au-Skipworth",
+                                          "incumbency":  "",
+                                          "contesting":  "Ikaroa-Rāwhiti"
+                                      },
+                                      {
+                                          "rank":  22,
+                                          "name":  "Shreejan Pandey",
+                                          "incumbency":  "",
+                                          "contesting":  "Wigram"
+                                      },
+                                      {
+                                          "rank":  23,
+                                          "name":  "Lauren Craig",
+                                          "incumbency":  "",
+                                          "contesting":  "Wairarapa"
+                                      },
+                                      {
+                                          "rank":  24,
+                                          "name":  "Zephyr Brown",
+                                          "incumbency":  "",
+                                          "contesting":  "Kaipara ki Mahurangi"
+                                      },
+                                      {
+                                          "rank":  25,
+                                          "name":  "Josh Jacobsen",
+                                          "incumbency":  "",
+                                          "contesting":  "North Shore"
+                                      },
+                                      {
+                                          "rank":  26,
+                                          "name":  "Angela Dalton",
+                                          "incumbency":  "",
+                                          "contesting":  "Papakura"
+                                      },
+                                      {
+                                          "rank":  27,
+                                          "name":  "Alika Wells",
+                                          "incumbency":  "",
+                                          "contesting":  "Henderson"
+                                      },
+                                      {
+                                          "rank":  28,
+                                          "name":  "Carl Morgan",
+                                          "incumbency":  "",
+                                          "contesting":  "Port Waikato"
+                                      },
+                                      {
+                                          "rank":  29,
+                                          "name":  "Courtney White",
+                                          "incumbency":  "",
+                                          "contesting":  "Hutt South"
+                                      },
+                                      {
+                                          "rank":  30,
+                                          "name":  "Te Whatanui Skipwith",
+                                          "incumbency":  "",
+                                          "contesting":  "Ōtāhuhu"
+                                      },
+                                      {
+                                          "rank":  31,
+                                          "name":  "Melody Willis",
+                                          "incumbency":  "",
+                                          "contesting":  "Kapiti"
+                                      },
+                                      {
+                                          "rank":  32,
+                                          "name":  "Pamela Grealey",
+                                          "incumbency":  "",
+                                          "contesting":  "Coromandel"
+                                      },
+                                      {
+                                          "rank":  33,
+                                          "name":  "Alma de Anda",
+                                          "incumbency":  "",
+                                          "contesting":  "Selwyn"
+                                      },
+                                      {
+                                          "rank":  34,
+                                          "name":  "Chris Norton",
+                                          "incumbency":  "",
+                                          "contesting":  "Remutaka"
+                                      }
+                                  ]
+              }
+}

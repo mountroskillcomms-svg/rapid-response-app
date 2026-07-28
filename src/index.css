@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind is now built locally (tailwind.config.js + postcss.config.js),
+   not the runtime Play CDN — a complete, deterministic stylesheet that no
+   longer drops layout utilities on large clients. */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+}
+
+/* Single scroll container. Every screen's own root div already carries
+   `min-h-screen` (100vh), so the page always fills the viewport. Previously
+   min-height:100vh was ALSO set on html, body AND #root — three stacked
+   100vh boxes. On classic (Windows) scrollbars that redundancy, plus
+   sub-pixel height rounding, produced a second phantom vertical scrollbar.
+   Keeping it on body alone leaves the document (html) as the only scroller. */
+body { min-height: 100vh; }
+
+/* Belt-and-braces against a phantom horizontal scrollbar from sub-pixel
+   widths; the app never scrolls sideways by design (wide tables/diagrams
+   get their own overflow containers). */
+html { overflow-x: hidden; }
