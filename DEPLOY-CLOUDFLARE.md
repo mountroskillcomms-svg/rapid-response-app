@@ -46,13 +46,8 @@ You do the Cloudflare account clicks; the code is already set up for it.
 3. Build settings:
    - **Framework preset:** None
    - **Build command:** `npm run build`
-   - **Build output directory:** `dist` (also pinned in `wrangler.toml`, so this
-     may auto-fill — leave it as `dist`)
+   - **Build output directory:** `dist`
    - **Root directory:** *(leave blank)*
-
-   > The repo's `wrangler.toml` pins the runtime **compatibility date** and the
-   > build output dir. You don't need to touch it — it just makes local testing
-   > and the deployed runtime behave consistently.
 4. Click **Save and Deploy**. The first build will **fail or show an empty
    vault** — that's expected; we haven't added the key/KV/vault-token yet. Keep
    going.
@@ -216,13 +211,17 @@ You can run the exact Functions locally before deploying:
 ```bash
 cp .dev.vars.example .dev.vars     # put your ANTHROPIC_API_KEY in it
 npm run build
-npx wrangler pages dev --kv KV
+npx wrangler pages dev dist --kv KV --compatibility-date 2026-07-29
 ```
 
-That serves `dist/` (from `wrangler.toml`) with the Functions and a **local** KV
-namespace bound as `KV`. Exercise a brief, a sweep, and "approve a policy" to
-confirm the round-trip. (Verified working: `/urlcheck`, the vault snapshot, and a
-full policy KV POST→GET→DELETE round-trip all run in the local Workers runtime.)
+That serves `dist/` with the Functions and a **local** KV namespace bound as
+`KV`. (The `--compatibility-date` flag just pins the runtime date for local dev;
+there is intentionally NO `wrangler.toml` in the repo — Cloudflare Pages builds
+from the dashboard settings, and a committed wrangler config makes the build try
+to deploy the project as a Worker instead.) Exercise a brief, a sweep, and
+"approve a policy" to confirm the round-trip. (Verified working: `/urlcheck`, the
+vault snapshot, and a full policy KV POST→GET→DELETE round-trip in the local
+Workers runtime.)
 
 ---
 

@@ -1,6 +1,6 @@
 # Copy to `.dev.vars` to test the Cloudflare Functions locally:
 #   npm run build
-#   npx wrangler pages dev --kv KV
+#   npx wrangler pages dev dist --kv KV --compatibility-date 2026-07-29
 # `.dev.vars` is gitignored. It supplies the same values the Pages Functions
 # read from env in production (here, just the Anthropic key). The `--kv KV`
 # flag gives you a local KV namespace bound as env.KV for the sweep + policy DB.
