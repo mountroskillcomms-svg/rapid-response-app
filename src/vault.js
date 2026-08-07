@@ -40,6 +40,36 @@ const getJson = async (path) => {
   } catch { return null; }
 };
 
+/* In production the vault is a BUILD-TIME SNAPSHOT served as static assets
+   (scripts/export-vault-snapshot.mjs bakes vault.json + one doc per note +
+   a manifest); in dev it's the live /vault.json + /vault/doc dev-server
+   endpoints (vault-api.mjs). import.meta.env.PROD is inlined by Vite at build
+   time, so dev behaviour is untouched. Everything downstream — the block
+   builders, matchers, getters — operates on the same in-memory shapes. */
+const PROD = import.meta.env.PROD;
+let snapshotManifest = null; // prod only: { docs: { <relPath>: "docs/dNNNN.json" } }
+
+const loadManifest = async () => {
+  if (!PROD) return null;
+  if (!snapshotManifest) snapshotManifest = (await getJson("/vault-snapshot/manifest.json")) || { docs: {} };
+  return snapshotManifest;
+};
+
+const vaultJsonUrl = () => (PROD ? "/vault-snapshot/vault.json" : "/vault.json");
+
+/* One note's { file, frontmatter, body }: the live endpoint in dev, the baked
+   per-doc asset (resolved through the snapshot manifest) in prod. Returns null
+   on any miss, exactly like the dev endpoint's 404. */
+const fetchVaultDoc = async (file) => {
+  if (!file) return null;
+  if (PROD) {
+    const m = await loadManifest();
+    const rel = m.docs?.[file];
+    return rel ? getJson(`/vault-snapshot/${rel}`) : null;
+  }
+  return getJson(`/vault/doc?file=${encodeURIComponent(file)}`);
+};
+
 /* ---- WHICH PARTS OF THE SECOND BRAIN ARE USED WHERE ----
    Rendered verbatim in the vault panel so the team can see the
    plumbing; each entry's builder does the actual injection. */
@@ -144,7 +174,7 @@ const ANALYSIS_DOCS = [
 ];
 
 export async function initVault() {
-  const v = await getJson("/vault.json");
+  const v = await getJson(vaultJsonUrl());
   if (!v || !Array.isArray(v.notes)) {
     cache.loaded = false;
     cache.data = null;
@@ -160,8 +190,7 @@ export async function initVault() {
     .filter((n) => (n.type === "issue" || n.type === "policy" || n.type === "analysis") && !/-MOC\.md$/.test(n.file))
     .map((n) => n.file);
   const wanted = [...new Set([...ANALYSIS_DOCS, ...discovered])];
-  const fetched = await Promise.all(wanted.map((f) =>
-    getJson(`/vault/doc?file=${encodeURIComponent(f)}`)));
+  const fetched = await Promise.all(wanted.map((f) => fetchVaultDoc(f)));
   cache.docs = {};
   for (const d of fetched) {
     if (!d?.body) continue;
@@ -442,7 +471,7 @@ export function vaultSeatDetail(name) {
     endpoint; returns "" on any failure. Read-only. */
 export async function vaultFetchDocBody(file) {
   if (!file) return "";
-  const d = await getJson(`/vault/doc?file=${encodeURIComponent(file)}`);
+  const d = await fetchVaultDoc(file);
   return d?.body ? d.body.trim() : "";
 }
 

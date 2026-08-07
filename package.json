@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/export-vault-snapshot.mjs && vite build",
+    "vault:snapshot": "node scripts/export-vault-snapshot.mjs",
+    "gen-icons": "node scripts/gen-icons.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
   },

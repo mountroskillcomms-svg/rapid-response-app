@@ -29,6 +29,15 @@ dist-ssr
 .feed-cache.json
 .sweep-seen.json
 
+# Vault snapshot — baked from labour-second-brain at build time (npm run build)
+public/vault-snapshot/
+
+# Local Cloudflare Functions secrets (wrangler pages dev)
+.dev.vars
+
+# Wrangler local state (local KV, cache) from `wrangler pages dev`
+.wrangler/
+
 # Local env overrides (but keep .env.example tracked)
 .env.*
 !.env.example

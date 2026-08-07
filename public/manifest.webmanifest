@@ -1,0 +1,15 @@
+{
+  "name": "Rapid Response — Mt Roskill",
+  "short_name": "Rapid Response",
+  "description": "Research-brief tool for the Mt Roskill Rapid Response Team.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0c0a09",
+  "theme_color": "#0c0a09",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

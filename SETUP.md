@@ -8,6 +8,10 @@ guide once, then just runs it whenever they need it.
 You need to be comfortable running a couple of commands in a terminal. If you get
 stuck, ping Ethan.
 
+> **Prefer to install it like an app on your phone?** There's now a free, private,
+> phone-installable hosted version too — see **[DEPLOY-CLOUDFLARE.md](DEPLOY-CLOUDFLARE.md)**.
+> This local guide still works and is the best way to *edit* the vault/policy data.
+
 ---
 
 ## What it costs

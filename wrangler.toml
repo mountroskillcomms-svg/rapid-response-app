@@ -1,0 +1,12 @@
+# Cloudflare Pages config. Kept minimal on purpose:
+#  - pins the runtime compatibility date (reproducible builds + clean local dev)
+#  - names the build output dir so `wrangler pages dev` and Pages agree
+#
+# Bindings are set in the Cloudflare dashboard, NOT here:
+#  - the ANTHROPIC_API_KEY secret (Settings → Variables and secrets)
+#  - the KV namespace, bound as `KV` (Settings → Bindings)
+# For LOCAL Functions testing, `wrangler pages dev dist --kv KV` supplies a
+# local KV, and `.dev.vars` supplies the key. See DEPLOY-CLOUDFLARE.md.
+name = "rapid-response-app"
+compatibility_date = "2026-07-29"
+pages_build_output_dir = "dist"

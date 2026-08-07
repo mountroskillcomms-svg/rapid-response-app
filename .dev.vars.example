@@ -1,0 +1,7 @@
+# Copy to `.dev.vars` to test the Cloudflare Functions locally:
+#   npm run build
+#   npx wrangler pages dev --kv KV
+# `.dev.vars` is gitignored. It supplies the same values the Pages Functions
+# read from env in production (here, just the Anthropic key). The `--kv KV`
+# flag gives you a local KV namespace bound as env.KV for the sweep + policy DB.
+ANTHROPIC_API_KEY=sk-ant-your-key-here

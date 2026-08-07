@@ -76,8 +76,14 @@ export async function initKnowledge() {
 export async function refreshLines() {
   const idx = await getJson("/knowledge/lines/index.json");
   const files = idx?.lines || [];
-  const entries = await Promise.all(files.map((f) => getJson(`/knowledge/lines/${f}`)));
-  cache.lines = entries.filter(Boolean);
+  const baked = (await Promise.all(files.map((f) => getJson(`/knowledge/lines/${f}`)))).filter(Boolean);
+  // Hosted build: overlay KV-added line entries (functions/kb/lines GET) on top
+  // of the repo-baked static ones. In dev, writes go to files, so no overlay.
+  const overlay = import.meta.env.PROD ? (await getJson("/kb/lines"))?.lines || [] : [];
+  const bySlug = new Map();
+  for (const l of baked) if (l?.slug) bySlug.set(l.slug, l);
+  for (const l of overlay) if (l?.slug) bySlug.set(l.slug, l); // KV wins / adds
+  cache.lines = [...bySlug.values()];
   return cache.lines;
 }
 
@@ -103,8 +109,14 @@ async function loadInterviewers() {
 export async function refreshPolicies() {
   const pidx = await getJson("/knowledge/policies/index.json");
   const files = pidx?.policies || [];
-  const entries = await Promise.all(files.map((f) => getJson(`/knowledge/policies/${f}`)));
-  cache.policies = entries.filter(Boolean);
+  const baked = (await Promise.all(files.map((f) => getJson(`/knowledge/policies/${f}`)))).filter(Boolean);
+  // Hosted build: overlay KV-added entries (functions/kb/policies GET) on top of
+  // the repo-baked static ones. In dev, writes go to files, so no overlay.
+  const overlay = import.meta.env.PROD ? (await getJson("/kb/policies"))?.policies || [] : [];
+  const byId = new Map();
+  for (const p of baked) if (p?.id) byId.set(p.id, p);
+  for (const p of overlay) if (p?.id) byId.set(p.id, p); // KV wins / adds
+  cache.policies = [...byId.values()];
   invalidateStableContext(); // policies feed the cached prefix
   return cache.policies;
 }
