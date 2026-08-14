@@ -33,6 +33,8 @@ import {
   vbIssueBriefsFor, vbAttackRegisterFor, vbPartyPlatformBlock, vbLabourPolicyFor,
   vbLabourRecordFor, vbComparisonBlock, vbGovtMinistersBlock, vaultMinisterMeta,
 } from "./vault.js";
+import { streamClaudeMessage } from "./anthropicStream.js";
+import { rosterConfirmsPortfolio } from "./portfolioMatch.js";
 
 /* ============================================================
    MODEL TIERING — ruthless token economy without quality loss.
@@ -1085,7 +1087,11 @@ async function callClaude(system, user, {
         .map((b) => ({ type: "text", text: b.text, ...(b.cache ? { cache_control: { type: "ephemeral" } } : {}) }));
   const attempt = async (useModel) => {
     const mkBody = (messages, tokens) => {
-      const body = { model: useModel, max_tokens: tokens, system: systemPayload, messages };
+      // stream:true is mandatory here, not cosmetic — a buffered response for a
+      // long web-search turn sends no bytes until the turn ends, and Cloudflare
+      // 524s any request that produces nothing for ~100s. An SSE stream keeps
+      // bytes flowing (deltas + pings) so the connection never idles out.
+      const body = { model: useModel, max_tokens: tokens, system: systemPayload, messages, stream: true };
       // Sonnet 4.6 supports the effort parameter (default "high"); dialling it
       // down on the cheaper tiers trims search/output spend. Haiku 4.5 errors
       // on effort, so it is never sent to the fast model.
@@ -1105,12 +1111,12 @@ async function callClaude(system, user, {
       return body;
     };
     const post = async (messages, tokens) => {
-      const res = await fetchWithTimeout("/anthropic/v1/messages", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(mkBody(messages, tokens)),
-      }, signal, callTimeout);
-      const data = await res.json();
+      // streamClaudeMessage reassembles the SSE stream back into the same
+      // { content, stop_reason, usage } shape the rest of this function used to
+      // get from res.json(), and re-throws errors with the same flags
+      // (cancelled / transient / status / apiType) so the retry logic below is
+      // untouched. callTimeout is applied as an IDLE deadline inside it.
+      const data = await streamClaudeMessage("/anthropic/v1/messages", mkBody(messages, tokens), signal, callTimeout);
       if (data.usage) recordUsage(data.usage);
       if (sink && data.usage) {
         const u = data.usage;
@@ -1120,12 +1126,6 @@ async function callClaude(system, user, {
         sink.output += u.output_tokens || 0;
         sink.searches += u.server_tool_use?.web_search_requests || 0;
         sink.calls += 1;
-      }
-      if (data.error) {
-        const e = new Error(data.error.message || "API error");
-        e.status = res.status;
-        e.apiType = data.error.type;
-        throw e;
       }
       return data;
     };
@@ -1786,6 +1786,8 @@ ${cArticles(results.evidence)}`;
 
 URL liveness has already been pre-confirmed by an automated HTTP check — do not spend searches on whether a URL exists or resolves. You MUST still verify that each page's content supports the claim attached to it: a live URL whose page does not say what is claimed is a hallucination.
 
+A claim may carry a "vault_confirmed" field: that core fact has already been verified against the campaign's own maintained records (e.g. the coalition ministers roster). Do not spend a search re-confirming a vault_confirmed fact — treat it as established — but you may still flag a different problem with the same item (a wrong date, scale, or attached URL).
+
 Using live web searches, check for:
 - URLs whose content does not match the claim attached to them, or that do not correspond to real published articles from the stated outlet.
 - Figures, dates, dollar amounts, or scales that searches contradict.
@@ -1832,6 +1834,26 @@ Return exactly this JSON shape:
           .filter((r) => urlStatus?.[r.url] === "dead")
           .map((r) => ({ where: r.where, index: r.index, why: `Linked URL is dead (404 or unreachable host): ${r.url.slice(0, 80)}` }));
       } catch { /* pre-pass unavailable — model sweep runs unchanged */ }
+
+      /* VAULT PRE-PASS — deterministic, zero-token, strictly additive. The
+         maintained coalition ministers roster (second brain) is authoritative
+         for who currently holds which portfolio — the same source the dossier
+         already trims its own search budget against. Any attacker portfolio the
+         roster corroborates is tagged vault_confirmed, so the sweep does not
+         spend a search re-checking a role the vault already verifies. CONFIRM-
+         ONLY: a non-match changes nothing, so this can never raise a false
+         flag. Attack mode only — policy-mode claims are free text with no
+         deterministic vault match. Degrades to nothing if the vault is absent. */
+      if (!P_LIKE(mode) && vaultLoaded() && form.attackerName) {
+        const roster = vaultMinisterMeta(form.attackerName);
+        if (roster?.line) {
+          (factPack.portfolios || []).forEach((p) => {
+            if (!p.vault_confirmed && rosterConfirmsPortfolio(roster.line, p.title)) {
+              p.vault_confirmed = `role verified against the maintained coalition ministers roster (${roster.last_updated || "undated"})`;
+            }
+          });
+        }
+      }
 
       /* The sweep is split into up to three PARALLEL calls — dossier/position
          claims, links+articles, angles — so wall time is one small sweep, not
