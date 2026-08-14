@@ -35,6 +35,7 @@ import {
 } from "./vault.js";
 import { streamClaudeMessage } from "./anthropicStream.js";
 import { rosterConfirmsPortfolio } from "./portfolioMatch.js";
+import { mergeVerify } from "./verifyMerge.js";
 
 /* ============================================================
    MODEL TIERING — ruthless token economy without quality loss.
@@ -1714,12 +1715,12 @@ ${cArticles(results.evidence)}`;
     run: async (results) => {
       // Restricted context: Stage output numbered + source pack ONLY.
       const a5 = results.angles || {};
-      const numbered = {
-        angles: (a5.angles || []).map((a, i) => ({
-          angle_index: i, angle: a.angle, why_it_lands: a.why_it_lands,
-          is_economics: !!a.is_economics,
-          source_urls: (a.sources || []).map((s) => s.url),
-        })),
+      const angles = (a5.angles || []).map((a, i) => ({
+        angle_index: i, angle: a.angle, why_it_lands: a.why_it_lands,
+        is_economics: !!a.is_economics,
+        source_urls: (a.sources || []).map((s) => s.url),
+      }));
+      const textNumbered = {
         positive_pivot: a5.positive_pivot || "",
         strategy_notes: (a5.strategy_notes || []).map((t, i) => ({ index: i, text: t })),
         register_reminders: (a5.register_reminders || []).map((t, i) => ({ index: i, text: t })),
@@ -1738,14 +1739,34 @@ Refer to items ONLY by their where + index as numbered in the input. Every text 
 
 Return exactly this JSON shape:
 {"unsupported_angles":[{"angle_index":0,"why":""}],"drafted_text_violations":[{"where":"angle | positive_pivot | strategy_note | register_reminder | video_beat | improvement","index":0,"why":""}],"tone_flags":[{"where":"angle | positive_pivot | strategy_note | register_reminder | video_beat | improvement","index":0,"issue":""}],"amplification_warning":"","verdict":"ready_for_human_review | needs_rework","rework_notes":""}` + JSON_ONLY;
-      const user = `NUMBERED OUTPUT TO VERIFY:
-${JSON.stringify(numbered)}
-
-SOURCE PACK:
+      const srcPack = `SOURCE PACK:
 ${cDossier(results.dossier, mode)}
 ${(P_LIKE(mode)) ? cPosition(results.position) + "\n" : ""}${cLinks(results.local)}
 ${cArticles(results.evidence)}`;
-      return stageCall("verify", system, user, { model: T.heavyModel || MODEL_DEEP, maxTokens: T.verifyMaxTokens, maxSearches: T.verifyMaxSearches, effort: T.effort, signal });
+      const mkUser = (numbered, withSrc) => `NUMBERED OUTPUT TO VERIFY:
+${JSON.stringify(numbered)}${withSrc ? `\n\n${srcPack}` : ""}`;
+
+      /* PARALLELISED like the hallucination sweep: the angle source-support
+         check (the searchy, slow part) is split across angle groups that run
+         concurrently with a divided search budget, and the drafted-text/tone
+         hygiene check on the non-angle text items (no search needed) runs
+         alongside. Every item keeps its original index, so the JSON outputs
+         merge losslessly. */
+      const nGroups = Math.min(3, Math.max(1, angles.length));
+      const groupSize = Math.ceil(angles.length / nGroups) || 1;
+      const angleGroups = [];
+      for (let i = 0; i < angles.length; i += groupSize) angleGroups.push(angles.slice(i, i + groupSize));
+      const perCall = Math.max(1, Math.ceil(T.verifyMaxSearches / Math.max(1, angleGroups.length)));
+      const hasText = Object.values(textNumbered).some((v) => (Array.isArray(v) ? v.length : v));
+      const runs = await Promise.all([
+        ...angleGroups.map((g) => stageCall("verify", system, mkUser({ angles: g }, true), {
+          model: T.heavyModel || MODEL_DEEP, maxTokens: T.verifyMaxTokens, maxSearches: perCall, effort: T.effort, signal,
+        })),
+        ...(hasText ? [stageCall("verify", system, mkUser(textNumbered, false), {
+          model: T.heavyModel || MODEL_DEEP, maxTokens: T.verifyMaxTokens, useSearch: false, maxSearches: 0, effort: T.effort, signal,
+        })] : []),
+      ]);
+      return mergeVerify(runs);
     },
   };
 
